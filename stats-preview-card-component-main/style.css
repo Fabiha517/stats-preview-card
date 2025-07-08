@@ -1,3 +1,4 @@
+/* === GLOBAL RESET === */
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -12,32 +13,29 @@ html {
 *::before {
 	box-sizing: inherit;
 }
+/* === BODY STYLING === */
 body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
 	min-height: 100vh; /* for older browsers */
 	min-height: 100svh; /* for newer Safari */
 	min-height: 100dvh; /* for modern dynamic viewport */
 	background-color: hsl(233, 47%, 7%);
 }
-
+/* === CONTAINER (CARD WRAPPER) === */
 .container {
 	width: 85%;
-	max-width: 1280px;
-	height: 83vh;
-	max-height: 600px;
-	height: auto;
-	height: auto;
+	max-width: 1200px;
+	max-height: 700px;
+	height: 90vh;
 	background-color: hsl(244, 38%, 16%);
-	border-radius: 4%;
+	border-radius: 0.7rem;
 	margin: 2rem auto;
-	padding-bottom: 2rem;
+	margin-top: 5rem;
 }
 .image-container {
 	height: 29vh;
 }
+
+/* === IMAGE SECTION (MOBILE FIRST) === */
 .image {
 	background-image: url("./images/image-header-mobile.jpg");
 	background-size: cover;
@@ -52,13 +50,15 @@ body {
 	background-blend-mode: multiply;
 	margin-bottom: 1.1rem;
 }
-
+/* === TEXT CONTENT WRAPPER === */
 .wrapper {
 	max-width: 87%;
 	margin: 0 auto;
 	text-align: center;
 	padding: 1rem 0;
 }
+
+/* === TYPOGRAPHY === */
 h1 {
 	font-family: "Inter", sans-serif;
 	color: hsl(0, 0%, 100%);
@@ -66,7 +66,6 @@ h1 {
 	margin-bottom: 1rem;
 	font-weight: 550;
 	letter-spacing: 0.5px;
-	max-width: fit-content;
 }
 span {
 	color: hsl(277, 64%, 61%);
@@ -84,6 +83,8 @@ main p {
 	line-height: 1.1rem;
 	letter-spacing: 0.5px;
 }
+
+/* === STATS SECTION === */
 .stats {
 	color: hsla(0, 0%, 100%, 0.6);
 	display: flex;
@@ -91,11 +92,119 @@ main p {
 	font-size: 0.7rem;
 	text-transform: uppercase;
 }
+.k {
+	text-transform: lowercase;
+}
 strong {
 	color: hsl(0, 0%, 100%);
 	font-size: 1.3rem;
 	margin-bottom: 0.4rem;
+	font-family: "Inter", sans-serif;
 }
 p {
 	margin-bottom: 1.5rem;
+}
+
+/* === TABLET STYLES (≥768px and ≤950px height) === */
+@media (min-width: 768px) and (max-height: 950px) {
+	body {
+		padding-top: 3rem;
+	}
+	.container {
+		display: flex;
+		flex-direction: row-reverse;
+		min-height: 60vh;
+		height: auto;
+	}
+	.image-container,
+	.wrapper {
+		flex: 1 1 50%;
+		min-width: 0;
+		height: auto;
+	}
+	.image {
+		background-image: url("./images/image-header-desktop.jpg");
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: right;
+		border-top-right-radius: 2%;
+		border-bottom-right-radius: 2%;
+		border-top-left-radius: 0%;
+		border-bottom-left-radius: 0;
+		margin-bottom: 0;
+	}
+
+	.wrapper {
+		padding: 2rem;
+		width: 50%;
+		height: 100%;
+	}
+	.main-paragraph {
+		margin-bottom: 2rem;
+	}
+}
+
+/* === DESKTOP STYLES (≥1024px wide and ≥650px high) === */
+@media (min-width: 1024px) and (min-height: 650px) {
+	.container {
+		margin-top: 8rem;
+		max-height: 50vh;
+	}
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		padding: 3rem;
+		text-align: left;
+		padding-left: 4rem;
+	}
+	.main-paragraph {
+		margin-left: 0;
+	}
+	h1 {
+		font-size: 2rem;
+		margin-bottom: 2rem;
+	}
+	.main-paragraph {
+		line-height: 1.5rem;
+		font-size: 0.9rem;
+	}
+	.stat-container {
+		margin-top: 2rem;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	strong {
+		margin-bottom: 0.5rem;
+	}
+}
+
+/* === LARGE SCREENS (≥1440px wide) === */
+@media (min-width: 1440px) {
+	.wrapper {
+		padding: 5rem;
+	}
+	h1 {
+		font-size: 2.2rem;
+	}
+	.stat-container {
+		display: flex;
+		justify-content: space-around;
+		position: relative;
+		right: 2rem;
+		margin-top: 5rem;
+	}
+	.main-paragraph {
+		line-height: 1.6rem;
+		font-size: 1rem;
+	}
+	.stats {
+		font-size: 1rem;
+	}
+	strong {
+		font-size: 1.5rem;
+	}
 }
