@@ -7,10 +7,12 @@ Users should be able to:
 
 View the optimal layout depending on their device's screen size
 
-Screenshot
-!Desktop View (desktop-view-screenshot.png)
 
-!Mobile View(mobile-view-screenshot.png)
+!Desktop View  
+![Desktop View](./desktop-view-screenshot.png)
+
+!Mobile View  
+![Mobile View](./mobile-view-screenshot.png)
 
 Links
 Solution URL:https://github.com/Fabiha517/stats-preview-card.git
