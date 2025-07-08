@@ -1,0 +1,101 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	box-sizing: border-box;
+	overflow-y: auto;
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 100vh; /* for older browsers */
+	min-height: 100svh; /* for newer Safari */
+	min-height: 100dvh; /* for modern dynamic viewport */
+	background-color: hsl(233, 47%, 7%);
+}
+
+.container {
+	width: 85%;
+	max-width: 1280px;
+	height: 83vh;
+	max-height: 600px;
+	height: auto;
+	height: auto;
+	background-color: hsl(244, 38%, 16%);
+	border-radius: 4%;
+	margin: 2rem auto;
+	padding-bottom: 2rem;
+}
+.image-container {
+	height: 29vh;
+}
+.image {
+	background-image: url("./images/image-header-mobile.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	border-top-right-radius: 0.6rem;
+	border-top-left-radius: 0.6rem;
+
+	background-color: hsl(277, 64%, 61%);
+	background-blend-mode: multiply;
+	margin-bottom: 1.1rem;
+}
+
+.wrapper {
+	max-width: 87%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1rem 0;
+}
+h1 {
+	font-family: "Inter", sans-serif;
+	color: hsl(0, 0%, 100%);
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+	font-weight: 550;
+	letter-spacing: 0.5px;
+	max-width: fit-content;
+}
+span {
+	color: hsl(277, 64%, 61%);
+}
+main p {
+	font-family: "Lexend Deca", sans-serif;
+}
+.main-paragraph {
+	color: hsla(0, 0%, 100%, 0.75);
+	max-width: 88.7%;
+	margin: 0 auto;
+	font-size: 0.8rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+	line-height: 1.1rem;
+	letter-spacing: 0.5px;
+}
+.stats {
+	color: hsla(0, 0%, 100%, 0.6);
+	display: flex;
+	flex-direction: column;
+	font-size: 0.7rem;
+	text-transform: uppercase;
+}
+strong {
+	color: hsl(0, 0%, 100%);
+	font-size: 1.3rem;
+	margin-bottom: 0.4rem;
+}
+p {
+	margin-bottom: 1.5rem;
+}
